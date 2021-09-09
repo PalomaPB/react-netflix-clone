@@ -1,5 +1,6 @@
 import React from 'react';
 import Login from './src/pages/login';
+import Movie from './src/pages/movie';
 import Home from './src/pages/home';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 import {StatusBar} from 'react-native';
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <PaperProvider theme={theme}>
       <StatusBar backgroundColor={'#000'} />
-      <Home />
+      <Movie />
     </PaperProvider>
   );
 };
