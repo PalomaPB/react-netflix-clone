@@ -19,13 +19,6 @@ const styles = StyleSheet.create({
     width: 84,
     borderRadius: 85,
   },
-  previaContainer: {
-    width: '100%',
-    marginTop: 50,
-  },
-  previaTitle: {
-    marginLeft: 20,
-  },
   logo: {
     width: 90,
     height: 45,

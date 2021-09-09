@@ -8,6 +8,7 @@ import Header from '../../components/header';
 import Hero from '../../components/hero';
 import ButtonVertical from '../../components/ButtonVertical';
 import Previas from '../../components/Previas';
+import Secao from '../../components/Secao';
 
 const Home = () => {
   return (
@@ -27,6 +28,10 @@ const Home = () => {
         <Title style={styles.previaTitle}>Prévias</Title>
         <Previas />
       </View>
+
+      {[1, 2, 3, 4].map((secao, index) => (
+        <Secao key={index} />
+      ))}
     </ScrollView>
   );
 };

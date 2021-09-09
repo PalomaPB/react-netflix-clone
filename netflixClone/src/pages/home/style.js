@@ -11,6 +11,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
   },
+  previaTitle: {
+    marginLeft: 20,
+  },
+  previaContainer: {
+    width: '100%',
+    marginTop: 50,
+  },
 });
 
 export default styles;
