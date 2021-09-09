@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
   },
+  menuHeader: {
+    width: '100%',
+    height: 38,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
 });
 
 export default styles;
