@@ -9,7 +9,7 @@ import {
 import {Title} from 'react-native-paper';
 import styles from './style';
 
-const Secao = ({hasTopBorder}) => {
+const Secao = ({secao, hasTopBorder}) => {
   return (
     <View style={styles.container}>
       {hasTopBorder && <View style={styles.borderTop} />}
@@ -17,11 +17,11 @@ const Secao = ({hasTopBorder}) => {
       <FlatList
         style={styles.lista}
         horizontal
-        data={[1, 2, 3, 4, 5]}
+        data={secao}
         renderItem={({item, index}) => (
           <TouchableOpacity key={index}>
             <ImageBackground
-              source={{uri: 'https://i.imgur.com/EJyDFeY.jpg'}}
+              source={{uri: item.capa}}
               style={[
                 styles.capa,
                 {marginRight: 10, marginLeft: index === 0 ? 20 : 0},
@@ -29,7 +29,7 @@ const Secao = ({hasTopBorder}) => {
               <Image
                 resizeMode="contain"
                 style={styles.logo}
-                source={{uri: 'https://i.imgur.com/4xN7wB8.png'}}
+                source={{uri: item.logoMobile ? item.logoMobile : item.logo}}
               />
             </ImageBackground>
           </TouchableOpacity>

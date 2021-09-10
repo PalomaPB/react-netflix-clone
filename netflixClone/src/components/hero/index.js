@@ -3,14 +3,12 @@ import {Text, ImageBackground, View, Image} from 'react-native';
 import styles from './style';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Hero = () => {
+const Hero = ({filmes}) => {
   return (
-    <ImageBackground
-      style={styles.hero}
-      source={{uri: 'https://i.imgur.com/EJyDFeY.jpg'}}>
+    <ImageBackground style={styles.hero} source={{uri: filmes.capa}}>
       <Image
         style={styles.logo}
-        source={{uri: 'https://i.imgur.com/4xN7wB8.png'}}
+        source={{uri: filmes.logoMobile ? filmes.logoMobile : filmes.logo}}
         resizeMode="contain"
       />
       <View style={styles.containerTop10}>
