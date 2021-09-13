@@ -8,23 +8,18 @@ import {
 } from 'react-native';
 import {Title} from 'react-native-paper';
 import styles from './style';
-import {useNavigation} from '@react-navigation/native';
 
 const Secao = ({secao, hasTopBorder}) => {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.container}>
       {hasTopBorder && <View style={styles.borderTop} />}
-      <Title style={styles.secaoTitle}>{secao[0]?.generos[0]}</Title>
+      <Title style={styles.secaoTitle}>Seção</Title>
       <FlatList
         style={styles.lista}
         horizontal
         data={secao}
         renderItem={({item, index}) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => navigation.navigate('Filme', {filmes: item, secao})}>
+          <TouchableOpacity key={index}>
             <ImageBackground
               source={{uri: item.capa}}
               style={[
