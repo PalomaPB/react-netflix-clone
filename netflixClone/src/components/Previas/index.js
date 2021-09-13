@@ -6,6 +6,7 @@ import styles from './style';
 const Previas = () => {
   return (
     <FlatList
+      showsHorizontalScrollIndicator={false}
       horizontal
       style={styles.flatListContainer}
       data={[1, 2, 3, 4, 5, 6, 7]}

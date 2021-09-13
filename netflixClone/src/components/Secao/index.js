@@ -15,6 +15,7 @@ const Secao = ({hasTopBorder}) => {
       {hasTopBorder && <View style={styles.borderTop} />}
       <Title style={styles.secaoTitle}>Seção</Title>
       <FlatList
+        showsHorizontalScrollIndicator={false}
         style={styles.lista}
         horizontal
         data={[1, 2, 3, 4, 5]}
