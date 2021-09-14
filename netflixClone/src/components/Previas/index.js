@@ -6,6 +6,7 @@ import styles from './style';
 const Previas = ({filmes}) => {
   return (
     <FlatList
+      showsHorizontalScrollIndicator={false}
       horizontal
       style={styles.flatListContainer}
       data={filmes}
